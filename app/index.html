@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="assets/js/angular.js"></script>
+	<script type="text/javascript" src="assets/js/angular-route.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+	<script src="app.js"></script>
+	<script src="sites/controllers/userctrl.js"></script>
+	<script src="sites/controllers/authctrl.js"></script>
+	<script src="sites/controllers/updatectrl.js"></script>
+    <script src="sites/controllers/updateStaffctrl.js"></script>
+    <script src="sites/controllers/dashboardctrl.js"></script>
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+
+<!-- Ui bootstrap popup! -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.2.js"></script>
+    <script src="sites/controllers/historyctrl.js"></script>
+    <script src="sites/controllers/staffctrl.js"></script>
+    <script src="sites/controllers/rentctrl.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    
+
+<!--Template-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/animate.css" rel="stylesheet" />
+    <!-- Squad theme CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+        <!-- Core JavaScript Files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/custom.js"></script>
+
+<!-- ngupload -->
+    <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-all.min.js"></script>
+
+<script type="text/javascript" src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+
+
+
+</head>
+
+
+<body ng-app="userpage" id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <h1 style="font-family: 'Lora', serif; font-size: 22px; color:#D6A603;">JIMMY's COFFEE</h1>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#intro">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#service">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li ng-controller="userctrl as ctrl" ng-click="ctrl.gotoauth()"><a><i class="fa fa-lock"></i></a></li>
+              </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+<div ui-view></div>
+
+</body>
+</html>
+
+
+
+  
+
+  
+
+  

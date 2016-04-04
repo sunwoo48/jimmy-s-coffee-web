@@ -1,0 +1,122 @@
+<div class="container" id="dashboard">
+
+	<h1 style="color:#6B2405;"><i class="fa fa-tasks"></i>Dashboard</h1><hr>
+
+<!-- ITEM DASH -->
+<section>
+<div class="col-sm-12 col-md-12">
+	<div ng-click="ctrl.menu =!ctrl.menu">
+		<h2>MENU<i class="fa fa-caret-square-o-down"></i></h2>
+	</div>
+
+		<div ng-show="ctrl.menu" style="background-color: #f9f9f9">
+			<h5>Add new Item</h5>
+
+			<form ng-submit="ctrl.addItem()">
+				<label>Name</label>
+					<input type="text" ng-model="ctrl.name"></input>
+
+				<label>Price</label>&nbsp;&nbsp;
+					<input type="text"ng-model="ctrl.price"></input>
+
+				<label>Category</label>
+					<select ng-options="option.value as option.label for option in ctrl.categories" ng-model="ctrl.category"></select>
+
+					<div class="btn">
+						<button class="btn" type="submit"><i class="fa fa-plus-square fa-2x"></i></button>
+					</div>
+			</form>
+
+		<h5>Item list</h5>
+		<table>
+			<tr>
+				<th>Category</th>
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>&nbsp;</th>
+				<th>Price</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr ng-repeat="item in ctrl.items">
+				<td>{{item.category}}</td>
+				<td>&nbsp;</td>
+				<td>{{item.name}}</td>
+				<td>&nbsp;</td>
+				<td>{{item.price}}</td>
+				<td>&nbsp;</td>
+				<td><button class="btn" ng-click="ctrl.remove(item.id)"><i class="fa fa-trash-o"></i></button></td>
+				<td>&nbsp;</td>
+				<td><button class="btn" ng-click="ctrl.goUpdate(item.id)"><i class="fa fa-pencil-square-o"></i></button></td>
+			</tr>
+		</table>
+	</div><hr>
+</div><hr>
+</section>
+
+
+<!-- STAFF DASH -->
+
+<section style="margin-top:60px">
+
+	<div class="col-sm-12 col-md-12">
+		<div ng-click="ctrl.staf =!ctrl.staf">
+			<h2>STAFF<i class="fa fa-caret-square-o-down"></i></h2>
+		</div>
+
+		<div ng-show="ctrl.staf" style="background-color: #f9f9f9" >
+			<h5>Add new Staff</h5>
+
+			<div class="form-box">
+			<form class="staffform">
+
+				<label>Name</label>&nbsp;&nbsp;
+					<input type="text" ng-model="ctrl.names"></input>
+				<label>image</label>
+					<input style="margin:0 auto; display: inline-block;" ngf-select type="file" ngf-max-size="2MB" accept="image/gif, image/jpeg, image/png" ng-model="ctrl.image"></input>
+					<button style="display: inline-block;" ng-click="ctrl.upload(ctrl.image)">Upload</button><br>
+					<img src="{{ctrl.uploadedPhoto}}">
+				<label>Bio</label>&nbsp;&nbsp;
+					<input type="textarea" ng-model="ctrl.bio"></input>
+
+				<label>Store</label>
+					<select ng-options="option.value as option.label for option in ctrl.cat" ng-model="ctrl.category"></select>
+			</form>
+			</div>
+
+				<button style="display: inline-block;" ng-click="ctrl.addStaff()" class="btn" type="submit"><i class="fa fa-plus-square fa-2x"></i></button>
+
+			<hr>
+
+		<h5>Staff list</h5>
+		<table>
+			<tr>
+				<th>Location</th>
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>&nbsp;</th>
+				<th>image</th>
+				<th>&nbsp;</th>
+				<th>Bio</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr ng-repeat="staff in ctrl.staffs">
+				<td>{{staff.category}}</td>
+				<td>&nbsp;</td>
+				<td>{{staff.name}}</td>
+				<td>&nbsp;</td>
+				<td>{{staff.image}}</td>
+				<td>&nbsp;</td>
+				<td>{{staff.bio}}</td>
+				<td>&nbsp;</td>
+				<td><button class="btn" ng-click="ctrl.removeStaff(staff.id)"><i class="fa fa-trash-o"></i></button></td>
+				<td>&nbsp;</td>
+
+				<td><button class="btn" ng-click="ctrl.goUpdateStaff(staff.id)"><i class="fa fa-pencil-square-o"></i></button></td>
+			</tr>
+		</table>
+	</div><hr>
+	</div><hr>
+</section>
+<h5 ng-click="ctrl.logout()"><i class="fa fa-sign-out"></i>Logout</h5>
+
+</div>

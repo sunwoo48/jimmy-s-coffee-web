@@ -1,0 +1,138 @@
+<section id="staff">
+	<div class="modal-header">
+		<h2>Our Crew</h2>
+		<p>
+		individuals with a passion for coffee and spectacular customer service. It won’t take many visits before they'll know your name and order. 
+		They want you to have a good cup of coffee – let them make it for you! They enjoy your company - talk to them!
+	</div>
+
+	<div class="modal-body">
+		<h3>Big Shot</h3><hr>
+		<div style="background-color: #f9f9f9">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="inner">
+                        <h5>Phil</h5>
+                        <p class="subtitle">Owner</p>
+                       <img ng-src="../../assets/images/team/1.jpg">
+                     </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="inner">
+    					<h5>Elinor</h5>
+                     	<p class="subtitle">General Manager</p>
+                     	<img src="../../assets/images/team/2.jpg"/>
+                     </div>
+                </div>
+            </div>
+        </div>		
+	   <hr>
+
+		<h3 ng-click="ctrl.custom1 =!ctrl.custom1">Portland Staff</h3><hr>
+        <div ng-show="ctrl.custom1" class="row">
+            <div class="col-xs-6 col-sm-4 col-md-4" ng-repeat="staff in ctrl.staffs | filter:{category:'portland'}">
+                <div class="staffbox">
+					<h5>{{staff.name}}</h5>
+                 	<img ng-src="{{staff.image}}">
+                 </div>
+            </div>     
+        </div>		
+        <hr>
+
+        <h3 ng-click="ctrl.custom2 =!ctrl.custom2">Baldwin Staff</h3><hr>
+        <div ng-show="ctrl.custom2"style="background-color: #f9f9f9">
+		<div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-4" ng-repeat="staff in ctrl.staffs | filter:{category:'baldwin'}">
+                <div class="inner">
+					<h5>{{staff.name}}</h5>
+                 	<img ng-src="{{staff.image}}" />
+                 </div>
+            </div>
+        </div>
+        </div><hr>
+
+        <h3 ng-click="ctrl.custom =!ctrl.custom">Gerrald Staff</h3><hr>
+		<div ng-show="ctrl.custom" class="row">
+            <div class="col-xs-6 col-sm-4 col-md-4" ng-repeat="staff in ctrl.staffs | filter:{category:'gerrald'}">
+                <div class="inner">
+					<h5>{{staff.name}}</h5>
+                 	<img ng-src="{{staff.image}}" />
+                 </div>
+            </div>
+<!--             <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>AJ</h5>
+                 	<img src="../../assets/images/team/g2.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Sage</h5>
+                 	<img src="../../assets/images/team/g3.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Anissa</h5>
+                 	<img src="../../assets/images/team/g4.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Moya</h5>
+                 	<img src="../../assets/images/team/g5.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Alicia</h5>
+                 	<img src="../../assets/images/team/g6.jpg"/>
+                </div>
+          	</div> -->
+         </div>
+         <hr>
+
+        <h3 ng-click="ctrl.custom3 =!ctrl.custom3">Ossington Staff</h3><hr>
+        <div ng-show="ctrl.custom3" style="background-color: #f9f9f9">
+		<div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Katie</h5>
+                 	<img src="../../assets/images/team/o1.jpg" />
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Ariana</h5>
+                 	<img src="../../assets/images/team/o2.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Ali</h5>
+                 	<img src="../../assets/images/team/o3.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Robyn</h5>
+                 	<img src="../../assets/images/team/o4.jpeg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Kelly</h5>
+                 	<img src="../../assets/images/team/o5.jpg"/>
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-4">
+                <div class="inner">
+					<h5>Alyson</h5>
+                 	<img src="../../assets/images/team/o6.jpg"/>
+                </div>
+          	</div>
+         </div>
+         </div>
+         <hr>
+    </div>
+</section>

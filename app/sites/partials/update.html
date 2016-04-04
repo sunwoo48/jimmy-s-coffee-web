@@ -1,0 +1,20 @@
+<div class="container">
+	<section style="margin-top:200px">
+
+	<h4>Item update</h4>
+	<form ng-submit="ctrl.update()">
+		<label>Category</label>
+			<input type="text" ng-model="ctrl.items.category"></input> 
+			</br>
+		<label>name</label>
+			<input type="text" ng-model="ctrl.items.name"></input>
+			</br>
+		<label>Price</label>
+			<input type="float" ng-model="ctrl.items.price"></input>
+
+		<div>
+			<button class="btn" type="submit">Update!</button>
+		</div>
+	</form>
+	</section>
+</div>

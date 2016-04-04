@@ -1,0 +1,32 @@
+
+<div class="container">
+	<section style="margin-top:200px">
+
+		<h5>Update Staff</h5>
+
+			<form>
+<!-- 		<form ng-submit="ctrl.updateStaff()"> -->
+			<label>Name</label>&nbsp;&nbsp;
+				<input type="text" ng-model="ctrl.staffs.name"></input><br>
+
+			<label>image</label>&nbsp;&nbsp;
+				<!-- <input type="text" accept="image/gif, image/jpeg, image/png" ng-model="ctrl.staffs.image"></input> -->
+				<input ngf-select type="file" ngf-max-size="2MB" accept="image/gif, image/jpeg, image/png" ng-model="newImage"></input>
+				<button ng-click="ctrl.uploadFile(newImage)">Upload</button><br>
+				<img ng-src="{{ctrl.staffs.image}}">
+				<br>
+
+			<label>Bio</label>&nbsp;&nbsp;
+				<input type="textarea" ng-model="ctrl.staffs.bio"></input><br>
+
+			<label>Location</label>
+				<input type="text" ng-model="ctrl.staffs.category"></input><br>
+
+		</form>
+
+		<div>
+			<button ng-click="ctrl.updateStaff()" class="btn" type="submit">Update Staff</button>
+		</div>
+		
+	</section>
+</div>
