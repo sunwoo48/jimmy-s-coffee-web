@@ -1,6 +1,15 @@
+//
+try{
+	var env = require('./config/env_dev');
+}
+catch(err){
+	var env = require('./config/env_prod');
+}
+
+
 var express = require('express');
 var models = require('./models');
-var bodyParser =require('body-Parser');
+var bodyParser =require('body-parser');
 var app = express();
 var sequelize = require('sequelize');
 var multer = require('multer');
@@ -26,10 +35,10 @@ app.use('/api/auth',auth_routes);
 
 //star server and database
 models.sequelize.sync().then(function() {
-	app.listen(8080,function() {
-		console.log('listening on http://localhost:8080');
-		console.log('Sequelize: Stop server with ctrl + c');
-	});
+	app.listen(env.port,function(){
+		console.log('Listenting on '+env.host+':'+env.port);
+		console.log('Stop server with CTRL + C');
+	})
 })
 
 
